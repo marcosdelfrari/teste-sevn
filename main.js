@@ -45,6 +45,7 @@ async function updateContent() {
                     game.team_away_name
                   )}</span>
                   </div>
+                 
                 </div>
               `
                 )
@@ -53,6 +54,20 @@ async function updateContent() {
           </div>
         </section>
       `;
+
+      document.querySelector("#prev").addEventListener("click", () => {
+        if (rodadaAtual > 0) {
+          rodadaAtual--;
+          renderRodadas(rodadaAtual);
+        }
+      });
+
+      document.querySelector("#next").addEventListener("click", () => {
+        if (rodadaAtual < rodadas.length - 1) {
+          rodadaAtual++;
+          renderRodadas(rodadaAtual);
+        }
+      });
     }
 
     function getEscudo(teamName) {
