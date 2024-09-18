@@ -50,7 +50,6 @@ const escudos = {
     fill="url(#paint0_linear_1_36)"
   />
 </svg>`,
-
   "Time C": `<svg
   width="32"
   height="40"
@@ -76,7 +75,6 @@ const escudos = {
     fill="url(#paint0_linear_1_36)"
   />
 </svg>`,
-
   "Time D": `<svg
   width="32"
   height="40"
@@ -102,7 +100,6 @@ const escudos = {
     fill="url(#paint0_linear_1_36)"
   />
 </svg>`,
-
   "Time E": `<svg
   width="32"
   height="40"
@@ -129,7 +126,6 @@ const escudos = {
   />
 </svg>
 `,
-
   "Time F": `<svg
   width="32"
   height="40"
@@ -156,7 +152,6 @@ const escudos = {
   />
 </svg>
 `,
-
   "Time H": `<svg
   width="32"
   height="40"
@@ -183,7 +178,6 @@ const escudos = {
   />
 </svg>
 `,
-
   "Time G": `<svg
   width="32"
   height="40"

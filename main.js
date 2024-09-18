@@ -22,10 +22,11 @@ async function updateContent() {
       document.querySelector("#app").innerHTML = `
         <section>
           <div>
+            <h1>Confira as rodadas do nosso campeonato fictício!</h1>
             <div>
               <button id="prev" ${rodada === 0 ? "disabled" : ""}>Left</button>
-              <div>
-                <h2>Rodadas</h2><span>Rodada ${round.round}</span>
+              <div class="title-rodadas">
+                <h2>Rodadas de Jogos</h2><span>Rodada ${round.round}</span>
               </div>
               <button id="next" ${
                 rodada === rodadas.length - 1 ? "disabled" : ""
@@ -45,7 +46,6 @@ async function updateContent() {
                     game.team_away_name
                   )}</span>
                   </div>
-                 
                 </div>
               `
                 )
@@ -71,7 +71,8 @@ async function updateContent() {
     }
 
     function getEscudo(teamName) {
-      return escudos[teamName];
+      const svg = escudos[teamName];
+      return svg ? `${svg}` : ` `;
     }
 
     renderRodadas(rodadaAtual);
