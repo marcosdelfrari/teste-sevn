@@ -32,7 +32,7 @@ async function updateContent() {
       }
 
       document.querySelector("#app").innerHTML = `
-        <section>
+        <section class="rodadas">
          <h1>Confira as rodadas do nosso campeonato fictício!</h1>
            
           <div class="box">
