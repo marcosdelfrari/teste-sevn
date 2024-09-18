@@ -1,8 +1,13 @@
 import "./style.css";
+import escudos from "./escudos.js";
 
 async function updateContent() {
   try {
     const response = await fetch("https://sevn-pleno-esportes.deno.dev");
+
+    if (!response.ok) {
+      throw new Error("erro na api");
+    }
 
     const rodadas = await response.json();
 
@@ -18,11 +23,13 @@ async function updateContent() {
         <section>
           <div>
             <div>
-              <button id="prev" >Left</button>
+              <button id="prev" ${rodada === 0 ? "disabled" : ""}>Left</button>
               <div>
                 <h2>Rodadas</h2><span>Rodada ${round.round}</span>
               </div>
-              <button id="next">Next</button>
+              <button id="next" ${
+                rodada === rodadas.length - 1 ? "disabled" : ""
+              }>Next</button>
             </div>
             <div>
               ${round.games
@@ -38,7 +45,6 @@ async function updateContent() {
                     game.team_away_name
                   )}</span>
                   </div>
-                 
                 </div>
               `
                 )
@@ -47,6 +53,10 @@ async function updateContent() {
           </div>
         </section>
       `;
+    }
+
+    function getEscudo(teamName) {
+      return escudos[teamName];
     }
 
     renderRodadas(rodadaAtual);
